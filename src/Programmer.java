@@ -12,7 +12,7 @@ public class Programmer implements Person{
     private String mLastName;
     private Date mDateOfBirth;
 
-    public Programmer(int id, String name, String lastName, Date dateOfBirth, int heigth, final Method method){
+    public Programmer(int id, String name, String lastName, Date dateOfBirth, int heigth){
         mId = id;
         mFirstName = name;
         mLastName = lastName;
