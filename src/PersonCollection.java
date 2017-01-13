@@ -89,31 +89,4 @@ public class PersonCollection {
         }
     }
 
-
-
-//    private static boolean isBigger(Person p1, Person p2, Method sortingCriteriaAlgorithm) throws Exception {
-//
-////        switch (sortingCriteriaAlgorithm.getName()){
-////            case "getId":
-////                return  (int) sortingCriteriaAlgorithm.invoke(p1, null) > (int) sortingCriteriaAlgorithm.invoke(p2, null);
-////            case "getHeight":
-////                return  (int) sortingCriteriaAlgorithm.invoke(p1, null) <= (int) sortingCriteriaAlgorithm.invoke(p2, null);
-////            case "getFirstName":
-////            case "getLastName":
-////            {
-////                int result = ((String) sortingCriteriaAlgorithm.invoke(p1, null)).compareTo(
-////                        (String) sortingCriteriaAlgorithm.invoke(p2, null));
-////                return (result == 1 || result == 0);
-////            }
-////            case "getDateOfBirth":
-////                int result = ((Date) sortingCriteriaAlgorithm.invoke(p1, null)).compareTo(
-////                        (Date) sortingCriteriaAlgorithm.invoke(p2, null));
-////                return (result == 1 || result == 0);
-////            default:
-////                throw new Exception("Didn't find method");
-////        }
-//        return (Integer) sortingCriteriaAlgorithm.invoke(p1, null)
-//    }
-
-//
 }
