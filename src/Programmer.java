@@ -21,32 +21,32 @@ public class Programmer implements Person{
     }
 
     @Override
-    public int getId() {
+    public synchronized int getId() {
         return mId;
     }
 
     @Override
-    public String getFirstName() {
+    public synchronized String getFirstName() {
         return mFirstName;
     }
 
     @Override
-    public String getLastName() {
+    public synchronized String getLastName() {
         return mLastName;
     }
 
     @Override
-    public Date getDateOfBirth() {
+    public synchronized Date getDateOfBirth() {
         return mDateOfBirth;
     }
 
     @Override
-    public int getHeight() {
+    public synchronized int getHeight() {
         return mHeight;
     }
 
     @Override
-    public int compareTo(Person o) {
+    public synchronized int compareTo(Person o) {
         //This changes according to implementation, but since "Programmer" is my implementation:
         if (this.getId() < o.getId()){
             return 1;

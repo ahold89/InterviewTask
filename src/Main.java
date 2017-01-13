@@ -13,7 +13,7 @@ public class Main {
 
         try {
             Class personClass = Class.forName("Person");
-            PersonCollection personCollection = new PersonCollection(personClass.getDeclaredMethod("getHeight"));
+            PersonCollection personCollection = new PersonCollection();
             SubscriberExtender subscriberExtender = new SubscriberExtender(personCollection);
             personCollection.attach(subscriberExtender);
             personCollection.Add(p1);

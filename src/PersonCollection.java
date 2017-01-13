@@ -8,11 +8,7 @@ public class PersonCollection {
 
     private ArrayList<Person> mPersonCollection = new ArrayList<>();
     private ArrayList<Subscriber> mSubscribers = new ArrayList<>();
-    private Method mSortingMethod;
 
-    public PersonCollection(Method sortingMethod){
-        mSortingMethod = sortingMethod;
-    }
 
     public synchronized void Add(Person person){
 
@@ -32,7 +28,7 @@ public class PersonCollection {
             }
 
             try {
-                //person is bigger than mPersonCollection.get(i)
+                //person is bigger than mPersonCollection.get(i) whatever the way compareTo was implemented
                 if (person.compareTo(mPersonCollection.get(i)) == 1){
                     mPersonCollection.add(i, person);
                     insertedPerson = true;
@@ -75,15 +71,11 @@ public class PersonCollection {
       return mPersonCollection.get(index);
     }
 
-    public Method GetSortingMethod(){
-        return mSortingMethod;
-    }
-
     public synchronized void attach(Subscriber subscriber){
         mSubscribers.add(subscriber);
     }
 
-    private void notifyAllObservers(){
+    private synchronized void notifyAllObservers(){
         for (Subscriber subscriber : mSubscribers) {
             subscriber.getNotification();
         }
