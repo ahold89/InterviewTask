@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c233ceee-a162-45a1-a9c6-9b5df5cfe123" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/PersonPackage/src/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Person.java" afterPath="$PROJECT_DIR$/PersonPackage/src/Person.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/PersonCollection.java" afterPath="$PROJECT_DIR$/PersonPackage/src/PersonCollection.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Programmer.java" afterPath="$PROJECT_DIR$/PersonPackage/src/Programmer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Subscriber.java" afterPath="$PROJECT_DIR$/PersonPackage/src/Subscriber.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SubscriberExtender.java" afterPath="$PROJECT_DIR$/PersonPackage/src/SubscriberExtender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SoftimizeProject.iml" afterPath="$PROJECT_DIR$/SoftimizeProject.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <ignored path="SoftimizeProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -116,8 +115,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -215,46 +214,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="SoftimizeProject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SoftimizeProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SoftimizeProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SoftimizeProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PersonPackage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SoftimizeProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SoftimizeProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="production" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SoftimizeProject" />
@@ -766,7 +725,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1484254737584</updated>
-      <workItem from="1484254739786" duration="19140000" />
+      <workItem from="1484254739786" duration="19321000" />
     </task>
     <task id="LOCAL-00001" summary="accidentaly had another parameter in constructor">
       <created>1484326826068</created>
@@ -775,15 +734,22 @@
       <option name="project" value="LOCAL" />
       <updated>1484326826068</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="- Added directory to store in it src folder&#10;- added to git ignore">
+      <created>1484327088002</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1484327088002</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19140000" />
+    <option name="totallyTimeSpent" value="19321000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="986" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -844,7 +810,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
     <MESSAGE value="accidentaly had another parameter in constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="accidentaly had another parameter in constructor" />
+    <MESSAGE value="- Added directory to store in it src folder&#10;- added to git ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added directory to store in it src folder&#10;- added to git ignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -949,8 +916,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
           <folding />
         </state>
       </provider>
