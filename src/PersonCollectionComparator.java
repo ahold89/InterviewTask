@@ -8,8 +8,9 @@ public class PersonCollectionComparator {
     //therefore, in PersonCollection there can be only one kind of "compareTo" method
     public static int compare(Person p1, Person p2, Method comparingMethod) throws Exception{
 
-        //Currently supplying only existing cases, but it is flexible for future changes,
-        //both in terms of according to new fields and different comparison of existing fields
+        //Currently supplying only existing cases, but this makes PersonCollection
+        // flexible for future changes, both in terms of according to new fields
+        // and different comparison of existing fields
         switch (comparingMethod.getName()){
             case "getId":
             case "getHeight":
@@ -41,13 +42,12 @@ public class PersonCollectionComparator {
                     }else{
                         return 0;
                     }
-                } catch (IllegalAccessException e) {
-                    e.printStackTrace();
-                } catch (InvocationTargetException e) {
+                } catch (IllegalAccessException | InvocationTargetException e) {
                     e.printStackTrace();
                 }
            default:
-               throw new Exception("Could not compare items");
+               throw new Exception("Could not compare items with id's: "
+                                   + p1.getId() + " and " + p2.getId());
         }
 
     }

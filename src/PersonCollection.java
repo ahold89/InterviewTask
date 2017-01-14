@@ -31,7 +31,7 @@ public class PersonCollection extends PersonCollectionComparator {
             }
 
             try {
-                //person is bigger than mPersonCollection.get(i) regardless of how it was implemented
+                //person is "bigger" than mPersonCollection.get(i) regardless of how it was implemented
                 if (compare(person, mPersonCollection.get(i), mComparingMethod) > 0){
                     mPersonCollection.add(i, person);
                     insertedPerson = true;
