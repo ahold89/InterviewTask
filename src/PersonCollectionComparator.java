@@ -6,9 +6,10 @@ public class PersonCollectionComparator {
 
     //By using this method, I don't implement Comparable<Person> in each implementing class of Person
     //therefore, in PersonCollection there can be only one kind of "compareTo" method
-    public static int compare(Person p1, Person p2, Method comparingMethod) {
+    public static int compare(Person p1, Person p2, Method comparingMethod) throws Exception{
 
-        //Currently supplying only existing cases, but it is flexible for future changes
+        //Currently supplying only existing cases, but it is flexible for future changes,
+        //both in terms of according to new fields and different comparison of existing fields
         switch (comparingMethod.getName()){
             case "getId":
             case "getHeight":
@@ -33,9 +34,9 @@ public class PersonCollectionComparator {
                 }
             case "getDateOfBirth":
                 try {
-                    if (((Date) comparingMethod.invoke(p1, null)).before((Date) comparingMethod.invoke(p2, null))){
+                    if (((Date) comparingMethod.invoke(p1, null)).after((Date) comparingMethod.invoke(p2, null))){
                         return 1;
-                    }else if (((Date) comparingMethod.invoke(p1, null)).after((Date) comparingMethod.invoke(p2, null))){
+                    }else if (((Date) comparingMethod.invoke(p1, null)).before((Date) comparingMethod.invoke(p2, null))){
                         return -1;
                     }else{
                         return 0;
@@ -45,8 +46,8 @@ public class PersonCollectionComparator {
                 } catch (InvocationTargetException e) {
                     e.printStackTrace();
                 }
-            default:
-                return 0;
+           default:
+               throw new Exception("Could not compare items");
         }
 
     }

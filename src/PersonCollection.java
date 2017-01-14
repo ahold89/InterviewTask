@@ -30,7 +30,6 @@ public class PersonCollection extends PersonCollectionComparator {
                 return;
             }
 
-            //Currently the try catch mechanism is not needed, but if we work with reflections in the future, it will be.
             try {
                 //person is bigger than mPersonCollection.get(i) regardless of how it was implemented
                 if (compare(person, mPersonCollection.get(i), mComparingMethod) > 0){
