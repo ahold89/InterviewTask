@@ -1,10 +1,7 @@
-import java.lang.reflect.Method;
 import java.util.ArrayList;
-import java.util.Date;
 
 
-
-public class PersonCollection {
+public class PersonCollection extends PersonCollectionComparator {
 
     private ArrayList<Person> mPersonCollection = new ArrayList<>();
     private ArrayList<Subscriber> mSubscribers = new ArrayList<>();
@@ -27,9 +24,10 @@ public class PersonCollection {
                 return;
             }
 
+            //Currently the try catch mechanism is not needed, but if we work with reflections in the future, it will.
             try {
-                //person is bigger than mPersonCollection.get(i) whatever the way compareTo was implemented
-                if (person.compareTo(mPersonCollection.get(i)) == 1){
+                //person is bigger than mPersonCollection.get(i) regardless of how it was implemented
+                if (compare(person, mPersonCollection.get(i)) == 1){
                     mPersonCollection.add(i, person);
                     insertedPerson = true;
                     break;
@@ -59,15 +57,15 @@ public class PersonCollection {
     }
 
 
-    public void Publish() {
+    public synchronized void Publish() {
         notifyAllObservers();
     }
 
-    public int GetNumberOfPeople() {
+    public synchronized int GetNumberOfPeople() {
         return mPersonCollection.size();
     }
 
-    public Person GetPerson(int index){
+    public synchronized Person GetPerson(int index){
       return mPersonCollection.get(index);
     }
 
@@ -75,37 +73,11 @@ public class PersonCollection {
         mSubscribers.add(subscriber);
     }
 
-    private synchronized void notifyAllObservers(){
+    private void notifyAllObservers(){
         for (Subscriber subscriber : mSubscribers) {
             subscriber.getNotification();
         }
     }
 
 
-
-//    private static boolean isBigger(Person p1, Person p2, Method sortingCriteriaAlgorithm) throws Exception {
-//
-////        switch (sortingCriteriaAlgorithm.getName()){
-////            case "getId":
-////                return  (int) sortingCriteriaAlgorithm.invoke(p1, null) > (int) sortingCriteriaAlgorithm.invoke(p2, null);
-////            case "getHeight":
-////                return  (int) sortingCriteriaAlgorithm.invoke(p1, null) <= (int) sortingCriteriaAlgorithm.invoke(p2, null);
-////            case "getFirstName":
-////            case "getLastName":
-////            {
-////                int result = ((String) sortingCriteriaAlgorithm.invoke(p1, null)).compareTo(
-////                        (String) sortingCriteriaAlgorithm.invoke(p2, null));
-////                return (result == 1 || result == 0);
-////            }
-////            case "getDateOfBirth":
-////                int result = ((Date) sortingCriteriaAlgorithm.invoke(p1, null)).compareTo(
-////                        (Date) sortingCriteriaAlgorithm.invoke(p2, null));
-////                return (result == 1 || result == 0);
-////            default:
-////                throw new Exception("Didn't find method");
-////        }
-//        return (Integer) sortingCriteriaAlgorithm.invoke(p1, null)
-//    }
-
-//
 }

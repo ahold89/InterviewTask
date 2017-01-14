@@ -1,10 +1,8 @@
-import java.lang.reflect.Method;
+
 import java.util.Date;
 
-/**
- * Created by asherh on 12/01/2017.
- */
-public interface Person extends Comparable<Person>{
+
+public interface Person {
 
         public int getId();
 

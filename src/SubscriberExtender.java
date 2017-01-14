@@ -1,6 +1,4 @@
-/**
- * Created by asherh on 13/01/2017.
- */
+
 public class SubscriberExtender extends Subscriber {
 
     public SubscriberExtender(PersonCollection personCollection) {
