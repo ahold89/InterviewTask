@@ -14,7 +14,7 @@ public class Main {
 
 
         try {
-            Method comparingMethod = Class.forName("Person").getMethod("getId");
+            Method comparingMethod = Class.forName("Person").getMethod("getFirstName");
             PersonCollection personCollection = new PersonCollection(comparingMethod);
             Subscriber subscriberExtender = new SubscriberExtender(personCollection);
             personCollection.attach(subscriberExtender);

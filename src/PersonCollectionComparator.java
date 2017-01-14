@@ -1,5 +1,6 @@
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.Date;
 
 public class PersonCollectionComparator {
 
@@ -7,9 +8,10 @@ public class PersonCollectionComparator {
     //therefore, in PersonCollection there can be only one kind of "compareTo" method
     public static int compare(Person p1, Person p2, Method comparingMethod) {
 
-        //Currently supplying only one case, but it is flexible for future changes
+        //Currently supplying only existing cases, but it is flexible for future changes
         switch (comparingMethod.getName()){
             case "getId":
+            case "getHeight":
                 try {
                     if ((int) comparingMethod.invoke(p1, null) < (int) comparingMethod.invoke(p2, null)){
                         return 1;
@@ -21,7 +23,28 @@ public class PersonCollectionComparator {
                 } catch (ReflectiveOperationException e) {
                     e.printStackTrace();
                 }
-
+            case "getFirstName":
+            case "getLastName":
+                try {
+                    return ((String) comparingMethod.invoke(p1, null))
+                            .compareTo((String) comparingMethod.invoke(p2, null)) * -1;
+                } catch (ReflectiveOperationException e) {
+                    e.printStackTrace();
+                }
+            case "getDateOfBirth":
+                try {
+                    if (((Date) comparingMethod.invoke(p1, null)).before((Date) comparingMethod.invoke(p2, null))){
+                        return 1;
+                    }else if (((Date) comparingMethod.invoke(p1, null)).after((Date) comparingMethod.invoke(p2, null))){
+                        return -1;
+                    }else{
+                        return 0;
+                    }
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                }
             default:
                 return 0;
         }
