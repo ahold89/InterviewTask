@@ -1,3 +1,4 @@
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 
@@ -5,6 +6,11 @@ public class PersonCollection extends PersonCollectionComparator {
 
     private ArrayList<Person> mPersonCollection = new ArrayList<>();
     private ArrayList<Subscriber> mSubscribers = new ArrayList<>();
+    private Method mComparingMethod;
+
+    public PersonCollection(Method comparingMethod){
+        mComparingMethod = comparingMethod;
+    }
 
 
     public synchronized void Add(Person person){
@@ -24,10 +30,10 @@ public class PersonCollection extends PersonCollectionComparator {
                 return;
             }
 
-            //Currently the try catch mechanism is not needed, but if we work with reflections in the future, it will.
+            //Currently the try catch mechanism is not needed, but if we work with reflections in the future, it will be.
             try {
                 //person is bigger than mPersonCollection.get(i) regardless of how it was implemented
-                if (compare(person, mPersonCollection.get(i)) == 1){
+                if (compare(person, mPersonCollection.get(i), mComparingMethod) == 1){
                     mPersonCollection.add(i, person);
                     insertedPerson = true;
                     break;
